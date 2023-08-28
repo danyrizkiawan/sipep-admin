@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reporting_documents",
+  "info": {
+    "singularName": "reporting-document",
+    "pluralName": "reporting-documents",
+    "displayName": "Dokumen Pelaporan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "default": 2023,
+      "min": 2000,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "document": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}

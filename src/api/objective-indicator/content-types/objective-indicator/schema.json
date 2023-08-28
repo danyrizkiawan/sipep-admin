@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "objective_indicators",
+  "info": {
+    "singularName": "objective-indicator",
+    "pluralName": "objective-indicators",
+    "displayName": "Indikator Sasaran",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "objective": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::objective.objective",
+      "inversedBy": "indicators"
+    },
+    "year": {
+      "type": "integer",
+      "required": true,
+      "min": 2000,
+      "default": 2023
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "objectiveTarget": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contents.target",
+      "required": true
+    }
+  }
+}

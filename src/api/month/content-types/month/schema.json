@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "months",
+  "info": {
+    "singularName": "month",
+    "pluralName": "months",
+    "displayName": "Month",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "shortName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

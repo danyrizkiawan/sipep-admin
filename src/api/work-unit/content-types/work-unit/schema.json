@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_units",
+  "info": {
+    "singularName": "work-unit",
+    "pluralName": "work-units",
+    "displayName": "Unit Kerja",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "headOfUnit": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contents.head",
+      "required": true
+    }
+  }
+}

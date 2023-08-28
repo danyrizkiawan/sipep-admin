@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "singularName": "activity",
+    "pluralName": "activities",
+    "displayName": "Kegiatan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "program": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::program.program",
+      "inversedBy": "activities"
+    },
+    "objectiveIndicator": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::objective-indicator.objective-indicator"
+    },
+    "year": {
+      "type": "integer",
+      "required": true,
+      "default": 2023,
+      "min": 2000
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "activityTarget": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "contents.target"
+    },
+    "sub_activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sub-activity.sub-activity",
+      "mappedBy": "activity"
+    },
+    "unit": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::work-unit.work-unit"
+    },
+    "indicator": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

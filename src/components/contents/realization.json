@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_contents_realizations",
+  "info": {
+    "displayName": "Realization",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "month": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::month.month"
+    },
+    "budget": {
+      "type": "biginteger",
+      "required": false,
+      "default": "0"
+    },
+    "budgetProblem": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contents.problem-solution"
+    },
+    "physical": {
+      "type": "string"
+    },
+    "physicalProblem": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contents.problem-solution"
+    },
+    "physicalTarget": {
+      "type": "string"
+    },
+    "physicalAchievement": {
+      "type": "string"
+    }
+  }
+}

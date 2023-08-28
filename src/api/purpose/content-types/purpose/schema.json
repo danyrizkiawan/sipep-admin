@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "purposes",
+  "info": {
+    "singularName": "purpose",
+    "pluralName": "purposes",
+    "displayName": "Tujuan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "number": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "mission": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mission.mission",
+      "inversedBy": "purposes"
+    },
+    "objectives": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::objective.objective",
+      "mappedBy": "purpose"
+    }
+  }
+}

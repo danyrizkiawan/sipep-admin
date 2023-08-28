@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_contents_pics",
+  "info": {
+    "displayName": "PIC"
+  },
+  "options": {},
+  "attributes": {
+    "month": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::month.month"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

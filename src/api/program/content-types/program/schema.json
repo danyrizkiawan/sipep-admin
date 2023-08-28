@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programs",
+  "info": {
+    "singularName": "program",
+    "pluralName": "programs",
+    "displayName": "Program",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true,
+      "min": 2000,
+      "default": 2023
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "programTarget": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "contents.target"
+    },
+    "activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity.activity",
+      "mappedBy": "program"
+    },
+    "indicator": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

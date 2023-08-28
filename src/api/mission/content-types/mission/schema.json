@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "missions",
+  "info": {
+    "singularName": "mission",
+    "pluralName": "missions",
+    "displayName": "Misi",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "number": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "purposes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::purpose.purpose",
+      "mappedBy": "mission"
+    }
+  }
+}

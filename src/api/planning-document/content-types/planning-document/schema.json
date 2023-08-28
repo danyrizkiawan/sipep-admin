@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "planning_documents",
+  "info": {
+    "singularName": "planning-document",
+    "pluralName": "planning-documents",
+    "displayName": "Dokumen Perencanaan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true,
+      "min": 2000,
+      "default": 2023
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "document": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

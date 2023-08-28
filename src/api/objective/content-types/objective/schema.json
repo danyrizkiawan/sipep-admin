@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "objectives",
+  "info": {
+    "singularName": "objective",
+    "pluralName": "objectives",
+    "displayName": "Sasaran Strategis",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "number": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "purpose": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::purpose.purpose",
+      "inversedBy": "objectives"
+    },
+    "indicators": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::objective-indicator.objective-indicator",
+      "mappedBy": "objective"
+    }
+  }
+}

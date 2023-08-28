@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "measurements",
+  "info": {
+    "singularName": "measurement",
+    "pluralName": "measurements",
+    "displayName": "Satuan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Kualitatif",
+        "Kuantitatif"
+      ],
+      "required": true
+    },
+    "visibility": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

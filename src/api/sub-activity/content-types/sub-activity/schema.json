@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_activities",
+  "info": {
+    "singularName": "sub-activity",
+    "pluralName": "sub-activities",
+    "displayName": "Sub Kegiatan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "activity": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::activity.activity",
+      "inversedBy": "sub_activities"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "subActivityTarget": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "contents.target"
+    },
+    "dpaBudget": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contents.budget"
+    },
+    "cashBudget": {
+      "type": "component",
+      "repeatable": true,
+      "required": false,
+      "component": "contents.budget"
+    },
+    "realization": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contents.realization"
+    },
+    "subActivityPic": {
+      "displayName": "PIC",
+      "type": "component",
+      "repeatable": true,
+      "component": "contents.pic"
+    },
+    "indicator": {
+      "type": "string"
+    }
+  }
+}

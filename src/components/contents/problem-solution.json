@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_contents_problem_solutions",
+  "info": {
+    "displayName": "Problem-Solution"
+  },
+  "options": {},
+  "attributes": {
+    "problem": {
+      "type": "string"
+    },
+    "solution": {
+      "type": "string"
+    }
+  }
+}
